@@ -5,10 +5,10 @@ export default function Field({
   label
 }){
   return (
-    <label>
+    <label className='flex-row'>
      { label }
-     {' '} 
-     <input value={ value } />
+     {' '}
+     <input type ='text' value={ value } />
     </label>
   )
 }
