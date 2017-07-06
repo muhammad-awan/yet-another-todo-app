@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
-import Checkbox from './components/Checkbox'
-import Field from './components/Field'
+import TodoList from './components/TodoList'
+
+const data = [
+  {
+    completed: true,
+    description: 'Yes'
+  },
+  {
+    completed: false,
+    description: 'No'
+  }
+]
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
+      <main className="App">
+        <div className="App-header mb-3">
           <h2>THE LISTA</h2>
         </div>
-          <Checkbox checked={ true } label='Moi Mucha'/>  
-          <Field value='some value' label='Mia'/>  
-      </div>
+        <TodoList items={data}/>
+      </main>
     );
   }
 }
