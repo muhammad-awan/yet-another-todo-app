@@ -5,12 +5,13 @@ import Checkbox from './Checkbox'
 export default function TodoItem({
   description,
   completed,
-  onComplete
+  onComplete,
+  onChangeDescription
 }){
   return (
     <div className='mb-3'>
       <Checkbox label='Completed' checked={ completed } onChange={ onComplete }/>
-      <Field label='Description' value={ description }/>
+      <Field label='Description' value={ description } onChange={ onChangeDescription }/>
     </div>
   )
 }

@@ -3,7 +3,8 @@ import TodoItem from './TodoItem'
 
 export default function TodoList({
   items,
-  onCompleteItem
+  onCompleteItem,
+  onChangeItemDescription
 }){
   return (
     <div>
@@ -14,6 +15,9 @@ export default function TodoList({
             completed={ item.completed }
             description={ item.description }
             onComplete={ () => onCompleteItem(item._id) }
+            onChangeDescription={ (newDescription) =>
+              onChangeItemDescription(item._id, newDescription)
+            }
           />
       ))
     }
